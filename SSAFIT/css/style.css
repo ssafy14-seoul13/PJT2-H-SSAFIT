@@ -1,199 +1,223 @@
-/* 기본 스타일 및 컨테이너 */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #d4f2d4 0%, #a8e6a8 100%);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 헤더 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.auth-buttons a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-/* 메인 콘텐츠 영역 - Flexbox 적용 */
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* 각 섹션 사이의 간격 */
-}
-
-/* 주요 섹션 공통 스타일 */
-section {
-    padding: 20px;
-    background-color: #e6f7e6; /* 연두색 배경 */
-    border: 1px solid #d4f2d4;
-}
-
-.section-title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* 사용자 정보 섹션 - Flexbox 적용 */
-.user-info-section {
-    display: flex;
-    gap: 20px;
-}
-
-.my-info-box,
-.today-goal-box {
-    flex: 1; /* 가로 공간을 균등하게 분할 */
-    padding: 40px;
-    text-align: center;
-    font-weight: bold;
-    color: #555;
-    background-color: #f9f9f9; /* 다른 색상으로 구분 */
-    border: 1px solid #e0e0e0;
-}
-
-/* 영상 검색 배너 */
-.video-search-banner {
-    height: 80px;
-    /* align-items와 justify-content를 사용하여 자식 요소를 중앙에 정렬합니다 */
+.auth-container {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #555;
-    background-color: #e6f7e6; /* 검색 배너에 연두색 배경 적용 */
-
 }
 
-/* 폼 (form)을 사용하여 input을 감싸고 중앙 정렬을 돕습니다 */
-.video-search-banner form {
-    width: 100%;
-    text-align: center; /* 텍스트 입력 필드를 중앙에 배치 */
-}
-
-/* 검색 입력 필드 (input) 스타일 */
-.video-search-banner input[type="text"] {
-    width: 80%; /* 배너 너비의 80% 차지 */
-    max-width: 600px; /* 최대 너비 지정 */
-    padding: 12px 20px; /* 상하좌우 패딩으로 크기 조절 */
-    border: 1px solid #ccc; /* 테두리 색상 */
-    border-radius: 20px; /* 둥근 모서리 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    font-size: 16px; /* 폰트 크기 */
-    outline: none; /* 포커스 시 외곽선 제거 */
-    transition: all 0.3s ease; /* 부드러운 전환 효과 */
-}
-
-.video-search-banner input[type="text"]:focus {
-    border-color: #4CAF50; /* 포커스 시 테두리 색상 변경 */
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6); /* 포커스 시 그림자 효과 변경 */
-}
-
-/* 영상 리스트 컨테이너 */
-.video-list-container,
-.exercise-videos-container {
-    min-height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
-}
-
-/* 영상 썸네일 */
-.video-thumbnail {
-    flex: 1 1 200px;
-    max-width: 100%;
-    min-width: 150px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 242, 212, 0.3);
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    cursor: pointer;
 }
 
-.video-thumbnail:hover {
+.auth-header {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-header h2 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.auth-body {
+    padding: 2rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e8f5e8;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #81c784, #a5d6a7);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #66bb6a, #81c784);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    background: transparent;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.switch-form a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    color: #388e3c;
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    border-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    border-color: #ffcdd2;
+    color: #c62828;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group-text {
+    background: #f1f8e9;
+    border: 2px solid #e8f5e8;
+    border-radius: 10px 0 0 10px;
+    color: #4caf50;
+}
+
+.form-control.with-icon {
+    border-radius: 0 10px 10px 0;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.welcome-section h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.welcome-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.user-info {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.user-info h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.user-info p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 추가 스타일링 */
+.fa-dumbbell, .fa-user-plus, .fa-user-circle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.input-group-text .fas {
+    font-size: 1.1rem;
+}
+
+/* 버튼 호버 효과 강화 */
+.btn-lg:hover {
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+/* 카드 호버 효과 */
+.auth-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
-.video-thumbnail img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.video-info {
-    padding: 10px;
-}
-
-.video-info h4 {
-    margin: 0 0 5px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.video-info p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
-
-/* 운동 부위 선택 버튼 */
-.exercise-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.part-btn {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.part-btn.active {
-    background-color: #4CAF50;
-    color: #fff;
-    border-color: #4CAF50;
-}
-
-/* 반응형 디자인을 위한 미디어 쿼리 */
+/* 반응형 디자인 */
 @media (max-width: 768px) {
-    .user-info-section {
-        flex-direction: column;
+    .welcome-section h1 {
+        font-size: 2rem;
     }
-}
-
-@media (max-width: 480px) {
-    .video-thumbnail {
-        flex: 1 1 100%;
+    
+    .auth-body {
+        padding: 1.5rem;
+    }
+    
+    .welcome-section {
+        padding: 2rem 1rem;
     }
 }
